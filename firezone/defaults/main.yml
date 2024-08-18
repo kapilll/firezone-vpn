@@ -1,0 +1,13 @@
+---
+firezone_email: ""
+firezone_network_ips: "10.0.0.0/8,fd00::/8"
+firezone_nginx_dir: "/etc/nginx"
+firezone_nginx_site_dir: "{{ firezone_nginx_dir }}/conf.d"
+firezone_nginx_ssl_dir: "{{ firezone_nginx_dir }}/ssl"
+firezone_sitename: ""
+firezone_ssl_certificate: |
+  -----BEGIN CERTIFICATE-----
+  -----END CERTIFICATE-----
+firezone_ssl_key_name: |
+  -----BEGIN PRIVATE KEY-----
+  -----END PRIVATE KEY-----

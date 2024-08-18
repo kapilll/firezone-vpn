@@ -1,0 +1,6 @@
+---
+- name: Restart nginx for firezone
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: true

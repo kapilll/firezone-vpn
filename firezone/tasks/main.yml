@@ -83,14 +83,14 @@
     dest: /opt/firezone/.env
     state: present
     regexp: "^DATABASE_PASSWORD="
-    line: "DATABASE_PASSWORD=<postgres-password>"
+    line: "DATABASE_PASSWORD={{ database_password }}"
 
 - name: Change database encryption key
   ansible.builtin.lineinfile:
     dest: /opt/firezone/.env
     state: present
     regexp: "^DATABASE_ENCRYPTION_KEY="
-    line : "DATABASE_ENCRYPTION_KEY=<base64-code>"
+    line : "DATABASE_ENCRYPTION_KEY={{ database_encryption_key }}"
 
 
 - name: Change config email

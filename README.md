@@ -4,7 +4,7 @@ This repository provides an automated solution for deploying a self-hosted VPN u
 
 ---
 
-## 🚀 Overview
+## Overview
 
 Firezone simplifies VPN management by offering:
 
@@ -16,7 +16,7 @@ This Ansible playbook helps automate the provisioning and setup of Firezone quic
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 Before running this playbook, ensure you have:
 
@@ -30,7 +30,7 @@ Before running this playbook, ensure you have:
 
 ---
 
-## 📝 Repository Structure
+## Repository Structure
 
 ```
 firezone-vpn/
@@ -41,7 +41,7 @@ firezone-vpn/
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Step 1: Update Inventory
 
@@ -58,7 +58,7 @@ Set your desired Firezone UI domain name by modifying the variable `firezone_sit
 
 ---
 
-## 🚦 Running the Playbook
+## Running the Playbook
 
 Execute the playbook directly on your local VM:
 
@@ -76,7 +76,7 @@ This will:
 
 ---
 
-## 🌐 Accessing Firezone
+## Accessing Firezone
 
 After successful deployment, access the Firezone UI via your web browser using your configured site name:
 
@@ -88,15 +88,7 @@ Default login details will be outputted during the playbook execution or can be 
 
 ---
 
-## 🔑 Best Practices
-
-* Always use SSH key-based authentication.
-* Regularly update your deployment and dependencies.
-* Monitor your VPN instance for security and performance.
-
----
-
-## 📌 Troubleshooting
+## Troubleshooting
 
 If deployment fails, ensure:
 
@@ -107,6 +99,6 @@ If deployment fails, ensure:
 
 ---
 
-## 💬 Contributions
+## Contributions
 
 Pull requests and suggestions for improvement are welcome! Feel free to open issues or submit contributions to enhance this project.

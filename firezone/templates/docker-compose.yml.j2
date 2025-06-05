@@ -1,4 +1,3 @@
-# based on : https://raw.githubusercontent.com/firezone/firezone/master/docker-compose.prod.yml
 x-deploy: &default-deploy
   restart_policy:
     condition: unless-stopped
@@ -16,16 +15,10 @@ services:
       - "13000:13000"
       - ${WIREGUARD_PORT:-51820}:${WIREGUARD_PORT:-51820}/udp
     env_file:
-      # This should contain a list of env vars for configuring Firezone.
-      # See https://www.firezone.dev/docs/reference/env-vars for more info.
       - ${FZ_INSTALL_DIR:-.}/.env
     volumes:
-      # IMPORTANT: Persists WireGuard private key and other data. If
-      # /var/firezone/private_key exists when Firezone starts, it is
-      # used as the WireGuard private. Otherwise, one is generated.
       - ${FZ_INSTALL_DIR:-.}/firezone:/var/firezone
     cap_add:
-      # Needed for WireGuard and firewall support.
       - NET_ADMIN
       - SYS_MODULE
     sysctls:

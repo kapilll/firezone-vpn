@@ -34,6 +34,12 @@
       - docker-compose-plugin
     state: present
 
+- name: Disable the default Nginx site
+  community.general.nginx_site:
+    name: default
+    state: disabled
+  notify: Restart nginx for firezone
+
 - name: Ensure nginx ssl dir exists
   ansible.builtin.file:
     mode: 0755

@@ -118,6 +118,21 @@
     src: docker-compose.yml.j2
     dest: "/opt/firezone/docker-compose.yml"
 
+- name: Install Docker engine packages
+  ansible.builtin.apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
+    update_cache: yes
+
+- name: Ensure Docker daemon is running
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: yes
+
 - name: Generate firezone environment
   ansible.builtin.shell: docker run --rm firezone/firezone bin/gen-env > /opt/firezone/.env
 

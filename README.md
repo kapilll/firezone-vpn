@@ -66,7 +66,7 @@ Execute the playbook directly on your local VM:
 ```bash
 git clone https://github.com/kapilll/firezone-vpn.git
 cd firezone-vpn
-ansible-playbook -i hosts.ini run_firezone.yaml
+sudo iiansible-playbook -i hosts.ini run_firezone.yaml
 ```
 
 This will:

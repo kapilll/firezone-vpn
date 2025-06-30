@@ -26,7 +26,7 @@ Before running this playbook, ensure you have:
   ```bash
   sudo apt update && sudo apt install ansible -y
   ```
-* Install Docker [Ubuntu Installation](https://docs.docker.com/engine/install/ubuntu/#:~:text=and%20development%20environments.-,Install%20using%20the,repository,-Before%20you%20install)
+* Install Docker with all the packages. [Ubuntu Installation](https://docs.docker.com/engine/install/ubuntu/#:~:text=and%20development%20environments.-,Install%20using%20the,repository,-Before%20you%20install)
 * SSH key-based authentication set up to access your target host.
 
 ---

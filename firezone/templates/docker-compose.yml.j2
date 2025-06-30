@@ -43,7 +43,7 @@ services:
     environment:
       POSTGRES_DB: ${DATABASE_NAME:-firezone}
       POSTGRES_USER: ${DATABASE_USER:-postgres}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_PASSWORD: "{{ DATABASE_PASSWORD }}"
     networks:
       - firezone-network
     deploy:

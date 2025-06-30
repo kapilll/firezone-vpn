@@ -104,8 +104,6 @@
     mode: 0644
     src: docker-compose.yml.j2
     dest: "/opt/firezone/docker-compose.yml"
-  vars:
-    DATABASE_PASSWORD: "{{ database_password }}"
 
 - name: Install Docker engine packages
   ansible.builtin.apt:
